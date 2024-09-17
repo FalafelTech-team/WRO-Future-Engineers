@@ -94,8 +94,8 @@ Palestine Polytechnic University
 We extend our heartfelt gratitude to our coach and all the team members who have played a crucial role in bringing this project to life.
 
 ## 1.2Barq team's social accounts
-* youtube : https://www.youtube.com/@barqteam
-* Instagram : https://www.youtube.com/redirect?event=channel_description&redir_token=QUFFLUhqa2hKa3pxcXBHNF9OUFptZ1NDVXhmRUl0Y0w5Z3xBQ3Jtc0tuX3RwZmR5MjAtVy1aa0lBdWZuUVNwWjN5RlRsUUJyTHc1OUhKUHFndWRielRZM1k2QjF4Rkpzb3BJTUVscW5jUWlkT053SlQ3RmMtbXdrZjNESFE1Mm1WSE5aSkhsVHdGZVhoUDFKZUJwek1tOFFlTQ&q=https%3A%2F%2Fwww.instagram.com%2Fbarqteamps%2F
+* youtube : 
+* Instagram :
 * you can also check our personal accounts in 1.1. [Team Management](#Team-Management)
 
 ## 1.3Vehicle Strengths

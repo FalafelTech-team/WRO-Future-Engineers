@@ -11,27 +11,17 @@ This documentation contains engineering materials of a self-driven vehicle's mod
 
 
 
-Project Overview
-1.1. Team Management
-1.3. Vehicle Strengths
-Programming Language
-The First Chassis
-Programming Challenges
-Lap Counting Mechanism
-Obstacle Avoidance Round Challenge
-Power
-components
-Future Work
-
-
-
-
-
-
-
-
-
-
+1.	Project Overview
+    1.1. Team Management
+    1.3. Vehicle Strengths
+2.	Programming Language
+3.	The First Chassis
+4.	Programming Challenges
+5.	Lap Counting Mechanism
+6.	Obstacle Avoidance Round Challenge
+7.	Power
+8.	components
+9.	Future Work
 
 
 
@@ -39,7 +29,9 @@ Future Work
 Introduction
 Hello everyone,
 We are the [Falafel engineers] from Palestine. We are a group of two ambitious young men: Rayan Farid, and Qusay Laila, with our car {Falafel} represents not only our drive for technological advancement but also a symbol of hope and aspiration for the people of Palestine. Through Falafel, we aim to demonstrate the remarkable achievements that Palestinian youth can accomplish, even in the face of adversity.
+
 In this competition, our goal is to showcase to the world what Palestinian youth can achieve, even under the harsh conditions of occupation. Through our efforts, we aim to send a powerful message about resilience, creativity, and the limitless potential that exists within every Palestinian boy.
+
 ----------------------------------------------------------------------------------------
 
 Project Overview
@@ -47,23 +39,26 @@ We began working on the WRO Future Engineers 2024 competition nearly three month
 Our team, led by Qusay Laila, developed an advanced self-driving car from scratch, integrating CNC-machined and 3D-printed parts with components from the EV3 Lego kit. Powered by two 12-volt lithiums batteries, the car boasts high speed, smooth maneuverability, and excellent acceleration thanks to a well-designed differential and a gear ratio of 1.4:1. We included a camera for obstacle detection and fine-tuned its software for optimal performance. We ensured the vehicle's seamless integration of mechanical and software systems. The car is lightweight at 1.2 kg, with room to compete in various challenges beyond the Future Engineers competition. Our GitHub repository documents the entire journey, including coding, design, and team management strategies. You can find more details about the competition in the official rules.
 1.1 Team Management
 We are deeply grateful to everyone who contributed to our work. The success of this project is a testament to the dedication and collaboration of our incredible team, which consists of:
-Qusay Laila: Qusay is our team leader and the mastermind behind problem-solving. He excels in CAD design and manages the main code, assembling all the functions like pieces of a Lego set. Contact Information: _ Email: qusaylaila.work@gmail.com _WhatsApp: +972592509054
-Rayan Farid: Rayan is our designer for 3D parts and CNC components. He also manages serial communication and contributes to the code alongside Qusay. Additionally, Rayan serves as a GitHub editor. Contact Information: _ Email: rayanplaystation180@gmail.com _WhatsApp: +972568997345
-*The Coach: Eng. Mohammad Muamar Eng. Mohammad Muamar, a Palestinian engineer and graduate of Palestine Polytechnic University in Hebron, has been our steadfast guide throughout this journey. His unwavering support, especially during challenging times, has been invaluable. Contact Information: Email: moh.mummar@gmail.com Phone: +970594958003 Palestine Polytechnic University
+•	Qusay Laila: Qusay is our team leader and the mastermind behind problem-solving. He excels in CAD design and manages the main code, assembling all the functions like pieces of a Lego set. Contact Information: _ Email: qusaylaila.work@gmail.com _WhatsApp: +972592509054
+•	Rayan Farid: Rayan is our designer for 3D parts and CNC components. He also manages serial communication and contributes to the code alongside Qusay. Additionally, Rayan serves as a GitHub editor. Contact Information: _ Email: rayanplaystation180@gmail.com _WhatsApp: +972568997345
+
+*The Coach: Eng. Mohammad Muamar Eng. Mohammad Muamar, a Palestinian engineer and graduate of Palestine Polytechnic University in Hebron, has been our steadfast guide throughout this journey. His unwavering support, especially during challenging times, has been invaluable. Contact Information: Email: moh.mummar@gmail.com Phone: +970594958003 Palestine Polytechnic University
 We extend our heartfelt gratitude to our coach and all the team members who have played a crucial role in bringing this project to life.
 
 
 
 1.2Barq team's social accounts
-youtube: https://www.youtube.com/@falafeltech/featured
-you can also check our personal accounts in 1.1. Team Management
+•	youtube: https://www.youtube.com/@falafeltech/featured
+•	you can also check our personal accounts in 1.1. Team Management
+
+
 
 
 1.3Vehicle Strengths
-Chassis and Mechanism: Our vehicle was meticulously built from scratch, utilizing CNC-machined and 3D-printed parts. We also incorporated components from the EV3 Lego kit for critical mechanisms, such as the steering system and differential.
-Speed: Powered by 12-volt lithiums batteries, our car achieves impressive speeds, giving it a competitive edge in performance.
-Mobility and Flexibility: The differential system significantly enhances the vehicle's ability to maneuver, providing smooth and flexible turns.
-Acceleration: The car boasts excellent acceleration, thanks to a well-calibrated gear ratio of 1.4:1 and a high-torque gear system that delivers powerful performance.
+•	Chassis and Mechanism: Our vehicle was meticulously built from scratch, utilizing CNC-machined and 3D-printed parts. We also incorporated components from the EV3 Lego kit for critical mechanisms, such as the steering system and differential.
+•	Speed: Powered by 12-volt lithiums batteries, our car achieves impressive speeds, giving it a competitive edge in performance.
+•	Mobility and Flexibility: The differential system significantly enhances the vehicle's ability to maneuver, providing smooth and flexible turns.
+•	Acceleration: The car boasts excellent acceleration, thanks to a well-calibrated gear ratio of 1.4:1 and a high-torque gear system that delivers powerful performance.
 ----------------------------------------------------------------------------------------
 2. Programming Languages
 We utilized C++ for coding the Arduino, ensuring efficient and reliable control of the hardware. Additionally, we employed Python to code the Raspberry Pi, particularly for implementing OpenCV with the Pi Camera.
@@ -75,31 +70,20 @@ Due to the high power and torque of the servo, it couldn't stay securely in plac
 4. Programming Challenges
 Detecting Turns and Direction In the WRO Future Engineers competition, the car's direction isn't fixed—it can move either clockwise or counterclockwise, adding complexity to navigation. This unpredictability is particularly challenging when the car needs to execute precise U-turns at specific points on the track.
 First Solution: Using the TCS3200 Color Sensor
-Color Detection: We initially programmed the TCS3200 sensor to identify specific colors on the track. An orange line signaled that the car should turn clockwise, while a blue line indicated a counterclockwise turn.
-Controlled Turning: Upon detecting a color, the car was instructed to turn at a specific angle. This angle was precisely controlled using an Inertial Measurement Unit (IMU), ensuring the car made accurate and consistent turns, regardless of external factors like speed or track conditions.
-Code Implementation: The process was automated through predefined functions such as detectOrangeLine and detectBlueLine, which triggered the appropriate turning actions based on the color detected.
+•	Color Detection: We initially programmed the TCS3200 sensor to identify specific colors on the track. An orange line signaled that the car should turn clockwise, while a blue line indicated a counterclockwise turn.
+•	Controlled Turning: Upon detecting a color, the car was instructed to turn at a specific angle. This angle was precisely controlled using an Inertial Measurement Unit (IMU), ensuring the car made accurate and consistent turns, regardless of external factors like speed or track conditions.
+•	Code Implementation: The process was automated through predefined functions such as detectOrangeLine and detectBlueLine, which triggered the appropriate turning actions based on the color detected.
 This approach provided a straightforward method for determining the car's direction based on visual cues from the track, with the IMU ensuring precise turning control. However, this solution proved suboptimal due to the car's high speed and the limitations of the TCS3200, which was not the best choice for color detection in this context.
 Second Solution: Using Three Ultrasonic Sensors
-Direction Determination: We implemented three ultrasonic sensors to guide the car's movement based on real-time distance measurements. These sensors were strategically positioned to monitor distances on the left, right, and front of the car. When a turn was required, the direction was determined by comparing the distances detected by the sensors:
-If the right sensor measured a greater distance than the left sensor, the car would turn clockwise.
-Conversely, if the left sensor detected a greater distance, the car would turn counterclockwise.
+•	Direction Determination: We implemented three ultrasonic sensors to guide the car's movement based on real-time distance measurements. These sensors were strategically positioned to monitor distances on the left, right, and front of the car. When a turn was required, the direction was determined by comparing the distances detected by the sensors:
+•	If the right sensor measured a greater distance than the left sensor, the car would turn clockwise.
+•	Conversely, if the left sensor detected a greater distance, the car would turn counterclockwise.
+
+
+
 Front Sensor Activation:
 The front ultrasonic sensor played a critical role in detecting when the car was approximately 50 cm away from an obstacle or a turning point. This detection served as a trigger for the car to initiate the turn.
 This approach emphasized spatial awareness and precise distance measurement, allowing the car to make informed directional decisions based on its environment rather than relying on visual cues. Ultimately, we decided that this solution was the most effective for our needs.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 5.Lap Counting Mechanism:
@@ -111,29 +95,27 @@ Overview:
 In our autonomous vehicle, precise steering control is essential for accurate navigation. We achieve this through an IMU-based steering mechanism. The Inertial Measurement Unit (IMU) supplies real-time data on the vehicle’s angular velocity, which is crucial for calculating the yaw angle (the vehicle's turning angle) and ensuring stable and accurate steering.
 Understanding the IMU:
 An IMU (Inertial Measurement Unit) integrates several sensors, typically including a 3-axis accelerometer and a 3-axis gyroscope. These components work together to monitor the vehicle's movement and orientation in three-dimensional space.
-Accelerometer: Measures acceleration along the X, Y, and Z axes, which helps determine the vehicle’s tilt and linear movement.
-Gyroscope: Measures angular velocity (the rate of rotation) around the X, Y, and Z axes, providing critical information for understanding rotational motion, especially the yaw angle.
+•	Accelerometer: Measures acceleration along the X, Y, and Z axes, which helps determine the vehicle’s tilt and linear movement.
+•	Gyroscope: Measures angular velocity (the rate of rotation) around the X, Y, and Z axes, providing critical information for understanding rotational motion, especially the yaw angle.
 The X, Y, and Z Axes:
 Understanding these axes is fundamental for interpreting IMU data:
-X-Axis: Represents roll, the tilting motion of the vehicle from side to side.
-Y-Axis: Represents pitch, the tilting motion of the vehicle from front to back.
-Z-Axis: Represents yaw, the rotational movement around the vertical axis, crucial for steering as it defines the vehicle’s direction of travel.
+•	X-Axis: Represents roll, the tilting motion of the vehicle from side to side.
+•	Y-Axis: Represents pitch, the tilting motion of the vehicle from front to back.
+•	Z-Axis: Represents yaw, the rotational movement around the vertical axis, crucial for steering as it defines the vehicle’s direction of travel.
 Calculating the Yaw Angle:
-The yaw angle (θ z​) quantifies the vehicle's rotation around the Z-axis. The IMU’s gyroscope provides angular velocity data along this axis, indicating the rate of rotation.
+The yaw angle (θ z) quantifies the vehicle's rotation around the Z-axis. The IMU’s gyroscope provides angular velocity data along this axis, indicating the rate of rotation.
+
+
+
 To determine the vehicle's heading, we calculate the yaw angle by integrating the angular velocity over time. This calculation updates continuously to maintain precise tracking of the vehicle’s direction.
 The yaw angle is computed using the following equation:
 \theta_z = \theta_{z, \text{previous}} + \left( \frac{\text{gyro}_z - \text{gyro_z_offset}}{131.0} \right) \times \Delta t
 Where:
-θ z​is the current yaw angle. previous θ z,previous​ is the yaw angle from the previous time step. gyro z​is the angular velocity around the Z-axis, provided by the gyroscope. \text{gyro_z_offset} is the gyroscope offset, determined during calibration to correct for any drift. Δt is the time elapsed between the current and previous readings.
+    θ zis the current yaw angle. previous θ z,previous is the yaw angle from the previous time step. gyro zis the angular velocity around the Z-axis, provided by the gyroscope. \text{gyro_z_offset} is the           gyroscope offset, determined during calibration to correct for any drift. Δt is the time elapsed between the current and previous readings.
 Importance of Gyro Offset:
-The gyroscope offset (\text{gyro_z_offset}) is vital as gyroscopes can experience slight errors or biases over time, known as drift. By calculating and subtracting this offset, we ensure that the yaw angle calculation remains accurate, preventing gradual deviations from the true value.
+    The gyroscope offset (\text{gyro_z_offset}) is vital as gyroscopes can experience slight errors or biases over time, known as drift. By calculating and subtracting this offset, we ensure that the yaw angle      calculation remains accurate, preventing gradual deviations from the true value.
+    
 ------------------------------------------------------------------------------------------
-
-
-
-
-
-
 
 
 
@@ -235,12 +217,6 @@ finally: # Close serial connection and camera when done arduino.close() camera.c
 
 
 
-
-
-
-
-
-
 7.Power
 Lithium Polymer (LiPo) batteries are highly favored in robotics due to their superior energy density, lightweight construction, and capability to deliver high currents. These attributes make them exceptionally suited for applications that demand both substantial power and agility, such as our autonomous robot. Advantages of LiPo Batteries:
 1- High Energy Density:
@@ -253,55 +229,33 @@ The 12V output is ideal for many high-power robotics components, such as motors 
 Power Sufficiency:
 A 12V battery provides ample power for the entire robot, ensuring that high-demand components like motors receive sufficient voltage for optimal performance. This higher voltage allows for efficient voltage regulation to lower voltages (e.g., 5V or 3.3V) for other electronics, while maintaining overall power efficiency.
 Key Characteristics of the 12V LiPo Battery:
-Voltage: 12V nominal, ideal for direct use with high-power motors and for stepping down to lower voltages.
-Capacity: Typically ranges from 4000mAh to 12000mAh, influencing how long the robot can operate before requiring a recharge.
-Discharge Rate: C-ratings (Generally have a C-rating of 0.1C to 0.3C) ensure the battery can deliver the necessary current for motors and other components during peak usage.
+    •	Voltage: 12V nominal, ideal for direct use with high-power motors and for stepping down to lower voltages.
+    •	Capacity: Typically ranges from 4000mAh to 12000mAh, influencing how long the robot can operate before requiring a recharge.
+    •	Discharge Rate: C-ratings (Generally have a C-rating of 0.1C to 0.3C) ensure the battery can deliver the necessary current for motors and other components during peak usage.
 
-Battery 1 Usage: the battery deliver the necessary current for motors and other components during peak usage (without raspberry)
+    •	Battery 1 Usage: the battery deliver the necessary current for motors and other components during peak usage (without raspberry)
 
-Battery 2 Usage: the battery deliver the necessary current for raspberry pi 
-Weight: Lightweight design, generally around 250g for a one 2000mAh battery, important for maintaining the robot’s agility and maneuverability.
+    •	Battery 2 Usage: the battery deliver the necessary current for raspberry pi 
+    •	Weight: Lightweight design, generally around 250g for a one 2000mAh battery, important for maintaining the robot’s agility and maneuverability.
 
-8.components
-Quantity
-Status
-Description
 
-1
-Raspberry Pi 4 Model B
-https://www.raspberrypi.com/products/raspberry-pi-4-model-b/
+•	8.components
+Quantity	Status	Description
+1	Raspberry Pi 4 Model B: 	https://www.raspberrypi.com/products/raspberry-pi-4-model-b/
 
-1
-*Arduino Mega:
-(https://store.arduino.cc/products/arduino-mega-2560-rev3)
+1	*Arduino Mega: 	(https://store.arduino.cc/products/arduino-mega-2560-rev3)
 
-1
-The L298N Motor Driver:
-https://components101.com/modules/l293n-motor-driver-module
+1	The L298N Motor Driver: 	https://components101.com/modules/l293n-motor-driver-module
 
-1
-Servo motor MG996r
-https://www.jsumo.com/mg996r-servo-motor-digital
+1	Servo motor MG996r: 	https://www.jsumo.com/mg996r-servo-motor-digital
 
-1
-Usb Camera
-https://www.fischertechnik.de/en/products/schools/robotics/560842-robotics-add-on-competition
+1	Usb Camera: 	https://www.fischertechnik.de/en/products/schools/robotics/560842-robotics-add-on-competition
+1	MPU-9250: 	https://learn.sparkfun.com/tutorials/mpu-9250-hookup-guide/all
 
-1
-MPU-9250
-https://learn.sparkfun.com/tutorials/mpu-9250-hookup-guide/all
+3	*HC-SR04 Ultrasonic Sensor: 	https://www.sparkfun.com/products/15569
 
-3
-*HC-SR04 Ultrasonic Sensor
-https://www.sparkfun.com/products/15569
-
-1
-two lithium Battery 12i
-"We have connected two 12-volt batteries in series using a 6S Battery Management System (BMS) to ensure balanced charging and efficient power management."
-
-1
-HW-083
-https://www.elektormagazine.com/labs/hw-083-hack-evolution-charger
+1	two lithium Battery 12v:	"We have connected two 12-volt batteries in series using a 6S Battery Management System (BMS) to ensure balanced charging and efficient power management."
+1	HW-083: 	https://www.elektormagazine.com/labs/hw-083-hack-evolution-charger
 
 
 
@@ -309,3 +263,5 @@ https://www.elektormagazine.com/labs/hw-083-hack-evolution-charger
 9.Future Work
 Our car is versatile enough to compete in multiple competitions beyond the Future Engineers competition. Its high speed, lightweight design, and exceptional flexibility in turning—thanks to the differential gear system—make it a strong contender. Additionally, the precise steering system enhances its maneuverability, allowing it to perform with accuracy and agility across various challenges.
 ------------------------------------------------------------------------------------------
+
+
